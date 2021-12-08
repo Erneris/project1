@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+     Results - Encyclopedia
+     
+{% endblock %}
+
+{% block body %}
+    <center>
+        <h1> Entries found matching query {{input}}:  <h1>
+        {% for entry in entries %}
+            <a href="wiki/{{entry}}">{{entry}}</a><br>
+        {% endfor %}
+
+    </center>
+{% endblock %}
